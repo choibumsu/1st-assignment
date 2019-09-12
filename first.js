@@ -2,14 +2,14 @@
 // 369 게임
 // node first.js 해보면 input output이 어떻게 되는지 알 수 있음
 
-var readline = require('readline');
+const readline = require('readline');
 
-var r = readline.createInterface({
+const r = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-r.question("", function (num) {
+r.on("line", function (num) {
     const numInterger = parseInt(num);
 
     let result = 0;
@@ -22,4 +22,6 @@ r.question("", function (num) {
     }
     console.log(result);
     r.close()
-})
+}).on("close", function() {
+	process.exit();
+});
