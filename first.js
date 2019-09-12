@@ -14,11 +14,12 @@ rl.on("line", function (num) {
 	const re = /[3, 6, 9]/g;
 	let result = 0;
 
-	for (number = 1; number <= numInterger; number++) {
+	for (number = 3; number <= numInterger; number++) {
 		ThreeSixNine = number.toString().match(re);
-		result += ThreeSixNine ? ThreeSixNine.length : 0;
+		if (ThreeSixNine) { result += ThreeSixNine.length };
 	}
 	console.log(result);
+	
 	rl.close()
 }).on("close", function () {
 	process.exit();
