@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", function (line) {
-	const numbers = line.split(" ").map((number) => parseFloat(number)); //공백으로 나눈 각각의 문자열을 실수로 변환
+	const numbers = line.split(" ").map(number => parseFloat(number)); //공백으로 나눈 각각의 문자열을 실수로 변환
 	const money = numbers[0], rate = numbers[1], year = numbers[2]; 
 
 	const result = money * (1 + rate / 100) ** year; // 원금 * (1 + 복리율)^년수
