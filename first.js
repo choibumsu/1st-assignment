@@ -10,7 +10,7 @@ r.question("", function (num) {
         Nums = i.toString().split('');
         for (j = 0; j < Nums.length; j++) {
             currNum = Nums[j];
-            result += (currNum == '3' || currNum == '6' || currNum == '9' ? 1 : 0);
+            result += (currNum === '3' || currNum === '6' || currNum === '9') ? 1 : 0;
         }
     }
     console.log(result);
