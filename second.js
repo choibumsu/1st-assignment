@@ -9,8 +9,10 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", function (line) {
-	const numbers = line.split(" ");
-	const money = parseFloat(numbers[0]), rate = parseFloat(numbers[1]), year = parseFloat(numbers[2]);
+	const numbers = line.split(" ").map(function (number) {
+		return parseFloat(number);
+	});
+	const money = numbers[0], rate = numbers[1], year = numbers[2];
 
 	let result = money * (1 + rate / 100) ** year;
 	console.log(result.toFixed(2));
