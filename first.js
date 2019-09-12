@@ -9,7 +9,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.on("num", function (num) {
+rl.on("line", function (num) {
     const numInterger = parseInt(num);
 
     let result = 0;
