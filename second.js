@@ -8,9 +8,14 @@ const rl = readline.createInterface({
 	output: process.stdout
 });
 
-rl.on("line", function(line) {
-	console.log(line);
+rl.on("line", function (line) {
+	const numbers = line.split(" ");
+	const money = parseFloat(numbers[0]), rate = parseFloat(numbers[1]), year = parseFloat(numbers[2]);
+
+	let result = money * (1 + rate / 100) ** year;
+	console.log(result.toFixed(2));
+
 	rl.close();
-}).on("close", function() {
+}).on("close", function () {
 	process.exit();
 });
