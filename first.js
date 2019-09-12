@@ -4,12 +4,12 @@
 
 const readline = require('readline');
 
-const r = readline.createInterface({
+const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-r.on("line", function (num) {
+rl.on("line", function (num) {
     const numInterger = parseInt(num);
 
     let result = 0;
@@ -21,7 +21,7 @@ r.on("line", function (num) {
         }
     }
     console.log(result);
-    r.close()
+    rl.close()
 }).on("close", function() {
 	process.exit();
 });
