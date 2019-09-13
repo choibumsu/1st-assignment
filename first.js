@@ -13,8 +13,8 @@ rl.on("line", function (num) {
 	const re369 = /[3, 6, 9]/g; //3 6 9 만 남길 정규표현식
 	let result = 0;
 
-	for (curr_num = 3; curr_num <= numInterger; curr_num++) {
-		arr369 = curr_num.toString().match(re369); //숫자를 문자로 바꾼 뒤 정규표현식 적용
+	for (let curr_num = 3; curr_num <= numInterger; curr_num++) {
+		let arr369 = curr_num.toString().match(re369); //숫자를 문자로 바꾼 뒤 정규표현식 적용
 		if (arr369) result += arr369.length; //3 6 9만 남은 char string의 길이를 더함
 	}
 	console.log(result);
